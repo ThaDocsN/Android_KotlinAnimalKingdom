@@ -22,3 +22,6 @@ fun main() {
 fun animalsDescOrder(list: MutableList<Animal>) {
     list.sortByDescending { it.year }
 }
+fun sortByName(list: MutableList<Animal>) {
+    list.sortedBy { it.name }
+}
