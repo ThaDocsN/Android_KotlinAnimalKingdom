@@ -19,3 +19,6 @@ fun main() {
         Fish("Perch", 1758)
     )
 }
+fun animalsDescOrder(list: MutableList<Animal>) {
+    list.sortByDescending { it.year }
+}
