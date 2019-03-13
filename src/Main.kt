@@ -1,5 +1,5 @@
 fun main() {
-    var animalsList = mutableListOf(
+    var animalList = mutableListOf(
         Mammal("Panda", 1869),
         Mammal("Zebra", 1778),
         Mammal("Koala", 1816),
