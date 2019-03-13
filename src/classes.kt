@@ -14,5 +14,13 @@ class Mammal(id: Int, name: String, year: Int): Animal(id, name, year) {
 
     override fun breath() = "Breathe with lungs"
 
+    override fun reproduce() = "Live births"
+}
+
+class Birds(id: Int, name: String, year: Int): Animal(id, name, year) {
+    override fun move() = "Flies"
+
+    override fun breath() = "Breathe with lungs"
+
     override fun reproduce() = "Eggs"
 }
