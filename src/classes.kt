@@ -1,6 +1,16 @@
-abstract class Animal(val id: Int, val name: String, val year: Int) {
+object iterator {
+    var id = 1
+}
+
+abstract class Animal(val name: String, val year: Int) {
     fun eat() {
         println("${name} is full")
+    }
+
+    var id: Int = iterator.id
+
+    init {
+        iterator.id += 1
     }
 
     abstract fun move():String
@@ -9,7 +19,7 @@ abstract class Animal(val id: Int, val name: String, val year: Int) {
 
     abstract fun reproduce():String
 }
-class Mammal(id: Int, name: String, year: Int): Animal(id, name, year) {
+class Mammal(name: String, year: Int): Animal(name, year) {
     override fun move() = "Walks"
 
     override fun breath() = "Breathe with lungs"
@@ -17,7 +27,7 @@ class Mammal(id: Int, name: String, year: Int): Animal(id, name, year) {
     override fun reproduce() = "Live births"
 }
 
-class Birds(id: Int, name: String, year: Int): Animal(id, name, year) {
+class Birds(name: String, year: Int): Animal(name, year) {
     override fun move() = "Flies"
 
     override fun breath() = "Breathe with lungs"
@@ -25,7 +35,7 @@ class Birds(id: Int, name: String, year: Int): Animal(id, name, year) {
     override fun reproduce() = "Eggs"
 }
 
-class Fish(id: Int, name: String, year: Int): Animal(id, name, year) {
+class Fish(name: String, year: Int): Animal(name, year) {
     override fun move() = "Swims"
 
     override fun breath() = "Breathe with gills"
