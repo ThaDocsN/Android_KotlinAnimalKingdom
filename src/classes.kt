@@ -24,3 +24,11 @@ class Birds(id: Int, name: String, year: Int): Animal(id, name, year) {
 
     override fun reproduce() = "Eggs"
 }
+
+class Fish(id: Int, name: String, year: Int): Animal(id, name, year) {
+    override fun move() = "Swims"
+
+    override fun breath() = "Breathe with gills"
+
+    override fun reproduce() = "Eggs"
+}
