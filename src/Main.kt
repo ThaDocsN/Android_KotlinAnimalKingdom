@@ -25,3 +25,7 @@ fun animalsDescOrder(list: MutableList<Animal>) {
 fun sortByName(list: MutableList<Animal>) {
     list.sortedBy { it.name }
 }
+
+fun sortByMove(list: MutableList<Animal>) {
+    list.sortedBy { it.move() }
+}
